@@ -1,5 +1,9 @@
 # SettingsCabinet
 
+[![Gem Version](https://badge.fury.io/rb/settings_cabinet.svg)](https://badge.fury.io/rb/settings_cabinet)
+[![Build](https://github.com/yujideveloper/settings_cabinet/actions/workflows/main.yml/badge.svg)](https://github.com/yujideveloper/settings_cabinet/actions/workflows/main.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9b3e8a9816ade4c40398/maintainability)](https://codeclimate.com/github/yujideveloper/settings_cabinet/maintainability)
+
 SettingsCabinet is a simple settings solution with ERB-enabled YAML file like [settingslogic](https://github.com/settingslogic/settingslogic).
 
 ## Installation
