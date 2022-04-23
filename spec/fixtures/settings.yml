@@ -1,0 +1,17 @@
+defaults: &defaults
+  setting1: 1
+  setting2: "2"
+  setting3: <%= 3 * 3 %>
+  setting4:
+    setting_child1: "child1"
+    setting_child2: [1, 2, 3]
+
+development:
+  <<: *defaults
+  setting2: "override 2"
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
