@@ -36,7 +36,7 @@ end
 ```
 
 | Name | Type | Description | Default | Optional |
-|--|--|--|--|--|--|
+|--|--|--|--|--|
 | `source` | String | Path of settings file. | - | No |
 | `namespace` | String | Using a namespace allows you to change your configuration depending on your environment. e.g. `Rails.env` | `nil` | Yes |
 | `permitted_classes` | Array of Class | Arbitrary classes can be allowed by adding those classes to the allowlist. e.g. `[Date, Time]` | `[]` | Yes |
