@@ -93,11 +93,11 @@ module SettingsCabinet
     end
 
     def [](...)
-      @settings.[](...) # rubocop:todo Layout/SpaceBeforeBrackets false positive: https://github.com/rubocop/rubocop/issues/10573
+      @settings.[](...)
     end
 
     def dig(...)
-      @settings.dig(...) # rubocop:todo Style/SingleArgumentDig false positive: https://github.com/rubocop/rubocop/issues/10574
+      @settings.dig(...)
     end
 
     def fetch(...)
@@ -121,7 +121,7 @@ module SettingsCabinet
     end
 
     def self.dig(...)
-      instance.dig(...) # rubocop:todo Style/SingleArgumentDig false positive: https://github.com/rubocop/rubocop/issues/10574
+      instance.dig(...)
     end
 
     def self.fetch(...)
