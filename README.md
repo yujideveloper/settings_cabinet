@@ -27,7 +27,7 @@ Or install it yourself as:
 DSL is very similar to settingslogic.
 
 ```ruby
-class Settings < SettingsCabinet
+class Settings < SettingsCabinet::Base
   using SettingsCabinet::DSL
 
   source Rails.root.join("config", "settings.yml")
@@ -75,7 +75,7 @@ Settings.load!
 ```
 or
 ```ruby
-class Settings < SettingsCabinet
+class Settings < SettingsCabinet::Base
   using SettingsCabinet::DSL
   using SettingsCabinet::Control
 
