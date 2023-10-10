@@ -41,11 +41,11 @@ RSpec.describe SettingsCabinet do
 
   context "without permitted classes" do
     it "cannot access date and raises a DisallowedClass exception" do
-      expect { UnpermitedDateAndTimeSettings.date }.to raise_error(::YAML::DisallowedClass)
+      expect { UnpermitedDateAndTimeSettings.date }.to raise_error(YAML::DisallowedClass)
     end
 
     it "cannot access time and raises a DisallowedClass exception" do
-      expect { UnpermitedDateAndTimeSettings.time }.to raise_error(::YAML::DisallowedClass)
+      expect { UnpermitedDateAndTimeSettings.time }.to raise_error(YAML::DisallowedClass)
     end
   end
 
@@ -97,7 +97,7 @@ RSpec.describe SettingsCabinet do
     end
 
     it "raises KeyError if unknown key is specified" do
-      expect { Settings.fetch(:not_exist_key1) }.to raise_error ::KeyError
+      expect { Settings.fetch(:not_exist_key1) }.to raise_error KeyError
     end
 
     it "returns default value if unknown key and default value are specified" do
@@ -111,7 +111,7 @@ RSpec.describe SettingsCabinet do
     end
 
     it "raises KeyError if unknown key is contained" do
-      expect { DevelopmentSettings.fetch_values(:setting1, :setting2, :not_exist_key1) }.to raise_error ::KeyError
+      expect { DevelopmentSettings.fetch_values(:setting1, :setting2, :not_exist_key1) }.to raise_error KeyError
     end
 
     it "returns containing evaluated value of specified block as the value corresponding to unknown key" do
