@@ -39,8 +39,8 @@ module SettingsCabinet
       @values.dig(*keys)
     end
 
-    def fetch(key, *args, &block)
-      @values.fetch(key.to_sym, *args, &block)
+    def fetch(key, ...)
+      @values.fetch(key.to_sym, ...)
     end
 
     def fetch_values(*keys, &block)
