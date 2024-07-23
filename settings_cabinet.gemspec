@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "A simple settings solution with ERB-enabled YAML file"
   spec.homepage = "https://github.com/yujideveloper/settings_cabinet"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.7.0"
+  spec.required_ruby_version = ">= 3.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
