@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+
+## [1.0.0] - 2024-07-23
+
 ### Changes
 
 * Add Ruby 3.2 support
