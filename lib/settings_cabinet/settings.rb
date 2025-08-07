@@ -25,7 +25,7 @@ module SettingsCabinet
     using AccessorBuilder
 
     def initialize(hash)
-      @values = hash.transform_values { |v| v.is_a?(::Hash) ? self.class.new(v) : v }
+      @values = hash.transform_values { |v| transform_value(v) }
 
       define_accessors!(@values)
     end
@@ -52,7 +52,31 @@ module SettingsCabinet
     end
 
     def to_h
-      @values.transform_values { |v| v.is_a?(self.class) ? v.to_h : v }
+      @values.transform_values { |v| transform_to_hash_value(v) }
+    end
+
+    def keys
+      @values.keys
+    end
+
+    private
+
+    def transform_value(value)
+      case value
+      when ::Hash
+        self.class.new(value)
+      else
+        value
+      end
+    end
+
+    def transform_to_hash_value(value)
+      case value
+      when self.class
+        value.to_h
+      else
+        value
+      end
     end
   end
 end
