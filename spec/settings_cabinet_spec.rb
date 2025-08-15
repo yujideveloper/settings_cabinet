@@ -142,8 +142,29 @@ RSpec.describe SettingsCabinet do
     it "returns a hash" do
       expect(DevelopmentSettings.to_h).to eq(
         { setting1: 1, setting2: "override 2", setting3: 9,
-          setting4: { setting_child1: "child1", setting_child2: [1, 2, 3] } }
+          setting4: { setting_child1: "child1", setting_child2: [1, 2, 3] },
+          settings5: { 
+            target1: { key1: "value1", key2: "value2" },
+            target2: { key1: "value1", key2: "value2" }
+          } }
       )
+    end
+  end
+
+  context "hash keys functionality" do
+    it "allows access to hash keys method" do
+      hash_test = Settings.defaults.settings5
+      expect(hash_test.keys).to eq([:target1, :target2])
+    end
+
+    it "allows access to nested hash keys" do
+      target1 = Settings.defaults.settings5.target1
+      expect(target1.keys).to eq([:key1, :key2])
+    end
+
+    it "allows access to root level keys" do
+      defaults_keys = Settings.defaults.keys
+      expect(defaults_keys).to include(:setting1, :setting2, :setting3, :setting4, :settings5)
     end
   end
 

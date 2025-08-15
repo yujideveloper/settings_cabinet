@@ -65,6 +65,10 @@ Accessors are defined in the same way as settingslogic, but writers do not.
 ```ruby
 Settings.foo.bar #=> "nested setting"
 Settings[:baz]   #=> 9
+
+# Hash Keys Support - Get all available keys from Hash structures
+Settings.foo.keys  #=> [:bar]
+Settings.keys      #=> [:foo, :baz, :quz]
 ```
 
 You can explicitly load all your settings, if needed.
