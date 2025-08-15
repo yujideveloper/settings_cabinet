@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+### Misc
+
+* CI against for Ruby 3.4
+  + [PR#6](https://github.com/yujideveloper/settings_cabinet/pull/6)
+
 
 ## [1.0.0] - 2024-07-23
 
