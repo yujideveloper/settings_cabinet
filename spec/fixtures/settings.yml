@@ -5,6 +5,13 @@ defaults: &defaults
   setting4:
     setting_child1: "child1"
     setting_child2: [1, 2, 3]
+  settings5:
+    target1:
+      key1: "value1"
+      key2: "value2"
+    target2:
+      key1: "value1"
+      key2: "value2"
 
 development:
   <<: *defaults

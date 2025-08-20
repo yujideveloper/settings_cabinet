@@ -54,5 +54,9 @@ module SettingsCabinet
     def to_h
       @values.transform_values { |v| v.is_a?(self.class) ? v.to_h : v }
     end
+
+    def keys
+      @values.keys
+    end
   end
 end
