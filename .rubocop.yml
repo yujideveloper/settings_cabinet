@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-performance
   - rubocop-rake
   - rubocop-rspec
@@ -6,6 +6,19 @@ require:
 AllCops:
   TargetRubyVersion: 3.0
   NewCops: enable
+
+Layout/LineLength:
+  Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Naming/PredicateMethod:
+  AllowBangMethods: true
 
 Style/Documentation:
   Enabled: false
@@ -18,12 +31,9 @@ Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
 
-Layout/LineLength:
-  Max: 120
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-
-Metrics/BlockLength:
-  Exclude:
-    - spec/**/*
+RSpec/ExampleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
